@@ -11,7 +11,7 @@ async function checkWheather (city){
     const response=await fetch(apiUrl)
     const data=await response.json()
 
-    console.log(data);
+    // console.log(data);
     if(data.cod =='404')
     {
         alert('not found')
@@ -42,15 +42,12 @@ async function checkWheather (city){
         break;
     }
 
-   
-
-
-
 }
 document.querySelector('img').addEventListener('click',
 ()=>{
 
     checkWheather(city.value)
+   
 }
 )
 
