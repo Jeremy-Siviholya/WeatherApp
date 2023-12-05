@@ -12,6 +12,10 @@ async function checkWheather (city){
     const data=await response.json()
 
     console.log(data);
+    if(data.cod =='404')
+    {
+        alert('not found')
+    }
 
     degre.innerHTML = `${Math.round(data.main.temp)}<sup>o</sup>C`;
     names.innerHTML=data.name
