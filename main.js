@@ -7,7 +7,7 @@ const icon = document.querySelector(".icon");
 
 async function checkWheather (city){
     const apiKey = "133e179b19cc4c4ab0311edfc8a233f5";
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city},uk&APPID=${apiKey}`;
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=${city},uk&APPID=${apiKey}`;
     const response=await fetch(apiUrl)
     const data=await response.json()
 
