@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.anim {
+  transform: translateY(0);
+  opacity: 1;
+  transition: 1s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.anim-v {
+  opacity: 0;
+  transform: translateY(30px);
+}

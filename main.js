@@ -4,6 +4,7 @@ const names=document.querySelector('.name')
 const wind=document.querySelector('.wind')
 const humidity=document.querySelector('.humidity')
 const icon = document.querySelector(".icon");
+const img = document.querySelector(".image");
 
 async function checkWheather (city){
     const apiKey = "133e179b19cc4c4ab0311edfc8a233f5";
@@ -23,31 +24,32 @@ async function checkWheather (city){
     humidity.innerHTML=`${data.main.humidity}%`
     switch (data.weather[0].main) {
       case "Clouds":
-        icon.src = "./public/Assets/images/clouds.png";
+        img.src = "./public/Assets/images/clouds.png";
         break;
       case "Clear":
-        icon.src = "./public/Assets/images/clear.png";
+        img.src = "./public/Assets/images/clear.png";
         break;
       case "Rain":
-        icon.src = "./public/Assets/images/rain.png";
+        img.src = "./public/Assets/images/rain.png";
         break;
       case "Drizzle":
-        icon.src = "./public/Assets/images/drizzle.png";
+        img.src = "./public/Assets/images/drizzle.png";
         break;
       case "Mist":
-        icon.src = "./public/Assets/images/mist.png";
+        img.src = "./public/Assets/images/mist.png";
         break;
 
       default:
         break;
     }
 
+
 }
-document.querySelector('img').addEventListener('click',
+icon.addEventListener('click',
 ()=>{
 
     checkWheather(city.value)
-   
+     
 }
 )
 
