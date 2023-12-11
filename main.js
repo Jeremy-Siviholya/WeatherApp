@@ -5,6 +5,7 @@ const wind=document.querySelector('.wind')
 const humidity=document.querySelector('.humidity')
 const icon = document.querySelector(".icon");
 const img = document.querySelector(".image");
+const alertSuccess = document.querySelector(".alert-success");
 
 async function checkWheather (city){
     const apiKey = "133e179b19cc4c4ab0311edfc8a233f5";
@@ -15,7 +16,7 @@ async function checkWheather (city){
     // console.log(data);
     if(data.cod =='404')
     {
-        alert('not found')
+        showAlert(alertSuccess)
     }
 
     degre.innerHTML = `${Math.round(data.main.temp)}<sup>o</sup>C`;
@@ -53,4 +54,11 @@ icon.addEventListener('click',
 }
 )
 
+const showAlert = (element) => {
+  element.classList.add("show");
+  setTimeout(() => {
+    element.classList.add("hide");
+  }, 10000);
+  element?.classList?.remove("hide");
+};
 

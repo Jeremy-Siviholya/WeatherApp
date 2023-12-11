@@ -8,6 +8,84 @@ export default {
       ...theme("colors"),
       auto: "auto",
     }),
+    extend: {
+      colors: {
+        perfect: {
+          100: "#E5005C",
+          200: "#FF0055",
+          300: "#F60062",
+          400: "#FF0066",
+        },
+        perfectGreen: {
+          100: "#00A084",
+          200: "#00AA87",
+          300: "#00FF66",
+        },
+        perfectBlue: {
+          100: "#00B6E3",
+          200: "#0066FF",
+        },
+        perfectGray: {
+          100: "#1D1D1D",
+          200: "#151515",
+          300: "#1A2027",
+          400: "#1A1A1A",
+        },
+        perfectWhite: {
+          100: "#FAF2F5",
+          200: "#FAFAFA",
+        },
+      },
+      boxShadow: {
+        perfectInset: `0px 40px 80px 0px rgba(0, 0, 0, 0.05),
+                       inset 0px -10px 20px 0px rgba(0, 0, 0, 0.05),
+                       0px 10px 20px 0px rgba(0, 0, 0, 0.05)`,
+      },
+      keyframes: {
+        blob: {
+          "0%": {
+            transform: "scale(1)",
+            opacity: "60%",
+          },
+          "33%": {
+            transform: "scale(1.1)",
+          },
+          "66%": {
+            transform: "scale(0.9)",
+          },
+          "100%": {
+            opacity: "100%",
+            background: "purple",
+            transform: "scale(1)",
+          },
+        },
+        blobs: {
+          "0%": {
+            transform: "scale(1)",
+          },
+          "33%": {
+            transform: "scale(1.1)",
+          },
+          "66%": {
+            transform: "scale(0.9)",
+          },
+          "100%": {
+            transform: "scale(1)",
+          },
+        },
+        toastify: {
+          "0%": {
+            top: "-50px",
+          },
+          "50%": {
+            top: "16px",
+          },
+          "100%": {
+            top: "-50px",
+          },
+        },
+      },
+    },
     animation: {
       none: "none",
       spin: "spin 1s linear infinite",
