@@ -16,6 +16,7 @@ async function checkWheather (city){
     // console.log(data);
     if(data.cod =='404')
     {
+      alertWarning.querySelector("span").innerText = `${data.message}`;
         showAlert(alertWarning)
     }
 
